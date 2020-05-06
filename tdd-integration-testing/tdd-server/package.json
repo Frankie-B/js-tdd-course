@@ -1,0 +1,24 @@
+{
+  "name": "js-tdd-course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx mocha \"src/**/*.test.js\" --recursive --require @babel/register --file  src/mocha-setup.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/register": "^7.9.0",
+    "chai": "^4.2.0",
+    "express": "^4.17.1",
+    "lodash": "^4.17.15",
+    "mocha": "^7.1.2",
+    "mongodb": "^3.5.7",
+    "regenerator-runtime": "^0.13.5",
+    "supertest": "^4.0.2"
+  }
+}
