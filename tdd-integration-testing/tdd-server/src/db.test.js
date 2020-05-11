@@ -9,7 +9,7 @@ describe('getUserByUsername', () => {
       `mongodb://localhost:27017/TEST_DB`,
       { useNewUrlParser: true, useUnifiedTopology: true }
     );
-    const db = Client.db('TEST_DB');
+    const db = client.db('TEST_DB');
     // tests go in here
     const fakeData = [
       { id: '1357', username: 'hello', email: 'hello@world.com' },
@@ -19,7 +19,7 @@ describe('getUserByUsername', () => {
     await db.collection('users').insertMany(fakeData);
 
     const actual = await getUserByUsername('hello');
-    const finalDBState = await db.collection('users').find().teArray();
+    const finalDBState = await db.collection('users').find().toArray();
     await db.dropDatabase();
     client.close();
 
